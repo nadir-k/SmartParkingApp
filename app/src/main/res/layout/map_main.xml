@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <fragment
+        android:id="@+id/map"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="30dp"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="10dp">
+
+    <fragment
+        android:id="@+id/autocomplete_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"/>
+
+    </androidx.cardview.widget.CardView>
+
+        <ImageButton
+            android:id="@+id/updatePreference"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="top|right"
+            android:background="@drawable/preferences"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="100dp"/>
+
+        <ImageButton
+            android:id="@+id/setDestination"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="bottom|right"
+            android:background="@drawable/set_route"
+            android:layout_margin="15dp"/>
+
+        <ImageButton
+            android:id="@+id/locationUser"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="bottom|right"
+            android:background="@drawable/my_location"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="100dp"/>
+
+</FrameLayout>

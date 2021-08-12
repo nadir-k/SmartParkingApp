@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <fragment
+        android:id="@+id/map"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:layout_margin="10dp"
+        android:layout_gravity="top"
+        app:cardCornerRadius="10dp"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_margin="20dp"
+            android:layout_gravity="end"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+            <fragment
+                android:id="@+id/autocomplete_fragment_finish"
+                android:layout_width="250dp"
+                android:layout_height="35dp"
+                android:layout_gravity="end"
+                android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <ImageButton
+            android:id="@+id/backToMainMap"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="top"
+            android:background="@drawable/backbutton"
+            android:layout_margin="10dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageButton
+        android:id="@+id/cancel_route"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_gravity="right"
+        android:background="@drawable/cancel_route"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="115dp"/>
+
+    <ImageButton
+        android:id="@+id/getDirections"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_gravity="bottom|right"
+        android:background="@drawable/start_route"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="30dp"/>
+
+    <ImageButton
+        android:id="@+id/relocateMe"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_gravity="bottom|right"
+        android:background="@drawable/my_location"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="120dp"/>
+
+
+</FrameLayout>
+

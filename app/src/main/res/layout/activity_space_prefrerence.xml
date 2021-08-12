@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="675dp"
+        android:layout_gravity="bottom"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="10dp"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="10dp">
+
+        <ImageButton
+            android:id="@+id/preference_close"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="top|right"
+            android:background="@drawable/close"
+            android:layout_marginRight="5sp"
+            android:layout_marginTop="5sp"/>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Space Preferences"
+            android:textSize="32sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_marginTop="80sp" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="It is important for us to know what you need a particular parking space for, so that we can optimise your experience to find you the best parking spaces. Remember, we work for you."
+            android:textSize="19sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="170sp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"/>
+
+
+        <com.google.android.material.checkbox.MaterialCheckBox android:id="@+id/lowestFloorLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Spaces on lowest floor level"
+            android:textSize="16sp"
+            android:layout_marginTop="330sp"
+            android:layout_marginLeft="20sp"
+            />
+
+        <com.google.android.material.checkbox.MaterialCheckBox android:id="@+id/disabledSpace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Disabled parking spaces"
+            android:textSize="16sp"
+            android:layout_marginTop="378sp"
+            android:layout_marginLeft="20sp"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/submitPreferences"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="Submit"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="50sp"
+            android:textSize="20dp"
+            android:textAllCaps="false"
+            android:onClick="submitPreferences"
+            />
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</FrameLayout>

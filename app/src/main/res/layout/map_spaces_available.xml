@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <fragment
+        android:id="@+id/map"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/setRoute"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="135dp"
+        android:elevation="4dp"
+        android:text="Set Route"
+        android:textSize="20sp"
+        android:backgroundTint="@color/quantum_deeporange"
+       android:onClick="spaceSelection"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="550sp"
+        android:layout_gravity="bottom"
+        app:cardCornerRadius="10dp"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="10dp">
+
+        <ImageButton
+            android:id="@+id/closeSpacesOpenMap"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="top|right"
+            android:background="@drawable/close"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:id="@+id/namecarpark"
+            android:layout_width="285dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Carpark Name"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/floorSpace"
+            android:layout_width="283dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="65dp"
+            android:text="Spaces on floor 1"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/spaceAvailable"
+            android:layout_width="286dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="125dp"
+            android:text="Available:"
+            android:textColor="#4CAF50"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/spaceTaken"
+            android:layout_width="286dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="165dp"
+            android:text="Taken:"
+            android:textColor="#F44336"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/disabled"
+            android:layout_width="286dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="205dp"
+            android:text="Disabled:"
+            android:textColor="#2196F3"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="250dp"
+            android:text="Choose Floor"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            android:textStyle="bold"/>
+
+        <TableLayout
+            android:id="@+id/tableSpacesAvailable"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="115sp">
+        </TableLayout>
+
+        <ImageButton
+            android:id="@+id/backtocarpark"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="bottom|left"
+            android:background="@drawable/backbutton"
+            android:layout_margin="10dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>
